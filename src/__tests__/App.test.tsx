@@ -1,9 +1,14 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import App from '../src/App'
+import App from '../App'
 
-test('renders learn react link', () => {
-  render(<App />)
-  const linkElement = screen.getByText(/learn react/i)
-  expect(linkElement).toBeInTheDocument()
+describe('UI components', () => {
+  beforeAll(() => {
+    render(<App />)
+  })
+
+  it('should render Add button', () => {
+    const addButton = screen.getByText(/Add/i)
+    expect(addButton).toBeInTheDocument()
+  })
 })
