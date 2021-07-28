@@ -5,13 +5,11 @@ module.exports = {
     },
   },
   babel: {
-    presets: ['@babel/preset-react'],
-    plugins: [],
+    presets: ['@babel/preset-react', { targets: { node: 'current' } }],
   },
   jest: {
     babel: {
       addPresets: true,
-      addPlugins: true,
     },
   },
 }
