@@ -1,16 +1,10 @@
-import React, { useEffect } from 'react'
+import React, { useState } from 'react'
 import type { FC } from 'react'
 
 const App: FC = () => {
-  const hatdog = 'hello hatdog'
-
-  useEffect(() => {
-    console.log(hatdog)
-  }, [])
-
   return (
-    <div className="bg-red-400">
-      <p className="bg-blue-200">Hello Booky</p>
+    <div className="flex items-center justify-center w-full h-screen">
+      <p>Hello Booky</p>
     </div>
   )
 }
