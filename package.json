@@ -28,7 +28,15 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "plugins": ["react-hooks"],
+    "overrides": [{
+      "files": ["**/*.ts?(x)"],
+      "rules": {
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn"
+      }
+    }]
   },
   "browserslist": {
     "production": [
