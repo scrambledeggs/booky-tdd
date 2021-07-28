@@ -1,0 +1,72 @@
+{
+    "settings": {
+      "react": { "version": "detect" },
+      "import/resolver": {
+        "typescript": {
+          "alwaysTryTypes": true,
+          "project": "."
+        }
+      },
+      "import/parsers": {
+        "@typescript-eslint/parser": [".ts", ".tsx"]
+      }
+    },
+    "env": {
+        "node": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "react-hooks",
+        "@typescript-eslint",
+        "import"
+    ],
+    "rules": {
+      "jsx-quotes": ["error", "prefer-double"],
+      "no-console":"off",
+      "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+      "no-use-before-define": "off",
+      "react/jsx-props-no-spreading":"off",
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
+      "react/jsx-curly-spacing": 2,
+      "react/jsx-equals-spacing": 2,
+      "no-trailing-spaces": 2,
+      "semi": [2, "never"],
+      "no-unused-vars": 2,
+      "@typescript-eslint/no-use-before-define": 0,
+      "react/prop-types": 0,
+      "eol-last": 2,
+      "array-bracket-spacing": 2,
+      "object-curly-spacing": [2, "always"],
+      "react/display-name": 0,
+      "arrow-spacing": 2,
+      "react/react-in-jsx-scope": 0,
+      "@typescript-eslint/camelcase": 0,
+      "@typescript-eslint/ban-ts-ignore": 0,
+      "@typescript-eslint/no-floating-promises": 0,
+      "@typescript-eslint/unbound-method": 0,
+      "@typescript-eslint/semi": 0,
+      "import/extensions": [
+        "error",
+        "ignorePackages", {
+          "js": "never",
+          "jsx": "never",
+          "ts": "never",
+          "tsx": "never"
+        }
+      ]
+    }
+}
