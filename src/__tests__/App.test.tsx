@@ -13,4 +13,15 @@ describe('UI components', () => {
     // Assert
     expect(addButton).toBeDefined()
   })
+
+  it('should render Remove button', () => {
+    // Arrange
+    render(<App />)
+
+    // Act
+    const removeButton = screen.getByText('Remove')
+
+    // Assert
+    expect(removeButton).toBeDefined()
+  })
 })
