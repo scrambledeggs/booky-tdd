@@ -1,5 +1,6 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import App from '../App'
 
 describe('UI components', () => {
@@ -38,4 +39,30 @@ describe('UI components', () => {
     // Assert
     expect(input).toBeDefined()
   })
+})
+
+describe('User interactions', () => {
+  beforeEach(() => {
+    render(<App />)
+  })
+
+  describe('given that I type in input textbox and press the Add button', () => {
+    it('should add my inputted item to the list', () => {
+      // Arrange
+      const input = screen.getByRole('textbox')
+      const addButton = screen.getByRole('button', { name: 'Add' })
+
+      // Act
+      userEvent.type(input, 'talong')
+      userEvent.click(addButton)
+
+      // Assert
+      const talong = screen.getByText('talong')
+
+      expect(talong).toBeVisible()
+    })
+  })
+
+  it.todo('should remove from list')
+  it.todo('should clear list')
 })
