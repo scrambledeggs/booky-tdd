@@ -3,11 +3,12 @@ import { render, screen } from '@testing-library/react'
 import App from '../App'
 
 describe('UI components', () => {
+  beforeEach(() => {
+    render(<App />)
+  })
+
   it('should render Add button', () => {
     // Arrange
-    render(<App />)
-
-    // Act
     const addButton = screen.getByText('Add')
 
     // Assert
@@ -16,9 +17,6 @@ describe('UI components', () => {
 
   it('should render Remove button', () => {
     // Arrange
-    render(<App />)
-
-    // Act
     const removeButton = screen.getByText('Remove')
 
     // Assert
@@ -27,9 +25,6 @@ describe('UI components', () => {
 
   it('should render Clear button', () => {
     // Arrange
-    render(<App />)
-
-    // Act
     const clearButton = screen.getByText('Clear')
 
     // Assert
