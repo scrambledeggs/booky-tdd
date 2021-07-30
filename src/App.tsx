@@ -11,6 +11,9 @@ const App: FC = () => {
         <button className="flex items-center justify-center h-4 p-6 mx-4 bg-blue-400 rounded-md">
           <p className="text-white">Remove</p>
         </button>
+        <button className="flex items-center justify-center h-4 p-6 bg-blue-400 rounded-md">
+          <p className="text-white">Clear</p>
+        </button>
       </div>
     </div>
   )

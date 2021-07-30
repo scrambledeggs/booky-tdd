@@ -24,4 +24,15 @@ describe('UI components', () => {
     // Assert
     expect(removeButton).toBeDefined()
   })
+
+  it('should render Clear button', () => {
+    // Arrange
+    render(<App />)
+
+    // Act
+    const clearButton = screen.getByText('Clear')
+
+    // Assert
+    expect(clearButton).toBeDefined()
+  })
 })
