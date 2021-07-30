@@ -30,4 +30,12 @@ describe('UI components', () => {
     // Assert
     expect(clearButton).toBeDefined()
   })
+
+  it('should render Input textbox', () => {
+    // Arrange
+    const input = screen.getByRole('textbox')
+
+    // Assert
+    expect(input).toBeDefined()
+  })
 })
