@@ -1,3 +1,6 @@
+# 🧪 TDD with React
+Booky Brownbag session last July 30, 2021. View the accompanying slide [here](https://github.com/scrambledeggs/booky-tdd/files/8790170/React.Testing.1.pdf)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
